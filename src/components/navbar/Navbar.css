@@ -1,0 +1,47 @@
+.menu{
+    height: 4rem; 
+    padding: 0rem 4rem 0rem 0.4rem;
+}
+.menu__link {
+    color: inherit;
+}
+.menu__link_logo{
+    font-size : 2rem ;
+    color : #FF0000;
+}
+.menu__link_title{
+    font-size: 2rem;
+}
+.menu__container{
+    margin-right: 1rem;
+    font-size: 1.5rem;
+}
+.menu__container_link{
+    border: 1px solid #3EA4FC ;
+    padding: 0.5rem;
+     
+}
+.login_link{
+    color:inherit;
+    font-size: 1.5rem;
+    gap: 8px ; 
+}
+.menu__container_btn{
+    border-radius: 50%; 
+    height: 2.5rem; 
+    width: 2.5rem; 
+}
+.theme_btn{
+    background-color:transparent;
+    border:none;
+    font-size : 1.5rem;
+}
+.ham-icon{
+    border-radius :50%;
+    width : 3.5rem;
+    height : 3.5rem;
+    font-size:1.5rem; 
+}
+.ham:hover{
+    background-color: #666161;
+}
