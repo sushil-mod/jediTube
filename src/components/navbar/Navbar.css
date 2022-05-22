@@ -1,9 +1,13 @@
 .menu{
     height: 4rem; 
     padding: 0rem 4rem 0rem 0.4rem;
+    background-color: #373737;
+    position:sticky; 
+    top:0;
 }
 .menu__link {
     color: inherit;
+    padding-left: 2rem;
 }
 .menu__link_logo{
     font-size : 2rem ;
