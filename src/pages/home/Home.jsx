@@ -1,16 +1,11 @@
-import React from 'react'
-import Navbar from '../../components/navbar/Navbar';
-import Sidebar from '../../components/sidebar/Sidebar';
+import React from 'react';
 
-function Home() {
+
+export function Home () {
   return <>
-  <Navbar/>
-
-  <div className='d-flex' >
-    <Sidebar/>
-    <div className='wd-100'>this home</div>
-  </div>
+  
+    <p>this is home</p>
   </>
 }
 
-export default Home;
+
