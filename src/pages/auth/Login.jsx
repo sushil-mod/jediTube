@@ -35,7 +35,7 @@ export function Login() {
 
  useEffect(()=>{
    if( userToken ){
-      navigate( location?.state?.from?.pathname ,{replace: true })
+      navigate( location?.state?.from?.pathname || "/explore" ,{replace: true })
     }
  },[userToken]);
   
