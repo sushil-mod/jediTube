@@ -19,7 +19,7 @@ export function Login() {
     setLoginInput({...loginInput,[e.target.name]:e.target.value})
   }
 
-  const guestUserInput = {email:"",password:""}
+  const guestUserInput = {email:"adarshbalika@gmail.com",password:"adarshBalika123"}
 
   console.log(loginInput);
   console.log(location);
@@ -74,7 +74,7 @@ export function Login() {
                 <button className="btn login padd-sm margin-btm" type="submit">Login</button>
             </div>
             <div className="form-btn ">
-                <button className="nav-login-btn">Login as guest</button>
+                <button className="nav-login-btn" onClick={(e) => loginSubmitHandler(e,guestUserInput) } >Login as guest</button>
             </div>
             <div className="form-next padd-md ">
                 <span>
