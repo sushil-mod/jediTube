@@ -1,0 +1,7 @@
+.text-color{
+color: white;
+}
+
+.calc-height{
+    height: calc(100vh - 4rem);
+}

@@ -11,50 +11,53 @@ function Sidebar() {
     const data =[
         {
             title : "Home",
-            icon : <FaHome/> 
+            icon : <FaHome/>,
+            link : "/",
         },
         {
             title : "Explore",
-            icon : <FaRegCompass/>
+            icon : <FaRegCompass/>,
+            link : "/explore",
         },
         {
             title : "Playlist" ,
-            icon : <MdPlaylistPlay/>
+            icon : <MdPlaylistPlay/>,
+            link : "/playlist",
         },
         {
             title : "Liked",
-            icon : <BiLike/>
+            icon : <BiLike/>,
+            link : "/liked",
         },
         {
             title : "Watch Later",
-            icon : <MdOutlineWatchLater/>
+            icon : <MdOutlineWatchLater/>,
+            link : "/watchlater",
         },
         {
             title : "History",
-            icon : <MdOutlineHistory/>
+            icon : <MdOutlineHistory/>,
+            link : "/history",
         }
     ]
 
 
   return <>
-    
     <div className='sidebar' >
         <ul className='sidebarlist'>
-           { data.map( ({title , icon }) => 
-               <li  > 
-               <NavLink to='/' className='row flex-center item-title'  >             
+           { data.map( ({title , icon , link}) => 
+               <li key={title} > 
+               <NavLink to={link} className='row flex-center item-title'  >             
                     <div className='side-icon'>
                         <div className='icon-div flex-center ' > {icon}</div>
                     </div>
                     <div className='side-title' >{title}</div> 
-                
                 </NavLink>
             </li>
            ) 
            }             
         </ul>
     </div>
-
   </>
 }
 
