@@ -1,6 +1,6 @@
 .sidebar{
     height:  calc(100vh - 4rem);
-    width: 16rem;
+    width: 20rem;
     position:sticky;
     left:0;
     top:4rem;
@@ -45,4 +45,17 @@
 .mini-sidebar{
     height:  calc(100vh - 4rem);
     width: 4.4rem;
+}
+
+
+@media only screen and (max-width: 700px)  {
+
+    .sidebar{
+        width: 8rem;
+    }
+
+    .row .side-title{
+        display: none;
+    }
+
 }

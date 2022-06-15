@@ -4,6 +4,7 @@
     background-color: #373737;
     position:sticky; 
     top:0;
+    z-index: 1;
 }
 .menu__link {
     color: inherit;

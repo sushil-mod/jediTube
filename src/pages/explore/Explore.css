@@ -1,0 +1,50 @@
+/* .scroller{
+    max-width: 490px;
+    padding: 10px;
+    display: grid;
+    grid-auto-flow: column;
+    column-gap: 1rem;
+    overflow-x: auto;
+    border: 2px solid white;
+}
+
+.scroller-item{
+    position: relative;
+    width: 100px;
+    height: 100px;
+    border: 4px solid #151515;
+    border-radius: 50%;
+}
+.scroller-item img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 50%;
+}
+.scroller-item::before{
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    width: calc(100% - 15px);
+    height: calc(100% -15px);
+    border-radius:inherit ;
+    z-index: -1;
+} */
+.explore-container{
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    padding: 1rem 2rem;
+}
+.category-chips-wrapper{
+   display:flex;
+   gap:1rem; 
+}
+.video-card-wrapper{
+    display: grid;
+    padding: 1rem 0;
+    grid-template-columns: repeat(auto-fill,minmax(18rem,1fr));
+    grid-gap: 2rem;
+}
