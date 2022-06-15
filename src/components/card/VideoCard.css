@@ -1,0 +1,50 @@
+.video_card{
+    
+    width:22.5rem;
+    padding: 0.5rem;
+  
+}
+.video_img{
+    width:100%;
+    height:15rem;
+}
+.video_info{
+    display:flex;
+    gap:1rem;
+}
+.video_avatar{
+    border-radius:50%;
+    width:3rem;
+    height:3rem;
+}
+.avatar_img{
+    width:100%;
+    height:100%;
+    border-radius:inherit;
+    object-fit:cover;
+}
+.video_title_container{
+    display:flex;
+    justify-content:center;
+    flex-direction:column; 
+}
+.video_title{
+    text-overflow:ellipsis;
+    white-space:nowrap;
+    width:15rem;
+    overflow:hidden;
+}
+.video_channel{
+    color:gray;
+}
+.card_ellipsis{
+    width:1rem;
+    display:flex;
+    justify-content:center;
+    align-items:center; 
+}
+
+.video_card:hover{
+    background-color: #373737;
+    
+}

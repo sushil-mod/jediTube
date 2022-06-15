@@ -5,7 +5,7 @@ function Layout({children}) {
   return (
     <div className='d-flex'  >
     <Sidebar/>
-    <div className='wd-100' style={{ backgroundColor:" #181818 " }}>
+    <div className='wd-100 container_layout'>
       {children}
     </div>
   </div>

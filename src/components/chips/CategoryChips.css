@@ -1,0 +1,17 @@
+.chips{
+    font-size:1.2rem;
+    display:inline-flex;
+    padding:5px 10px;
+    border-radius:50px;
+    justify-content:space-between;
+    align-items:center;
+    gap:1rem;
+    cursor: pointer;
+    background-color:#4D4D4D;
+    color:#F5F5F5;
+    border:1px solid #F5F5F5;
+}
+.chips:hover{
+    background-color: #F5F5F5;
+    color: #4D4D4D;
+}
