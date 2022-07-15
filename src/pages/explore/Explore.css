@@ -45,6 +45,6 @@
 .video-card-wrapper{
     display: grid;
     padding: 1rem 0;
-    grid-template-columns: repeat(auto-fill,minmax(18rem,1fr));
+    grid-template-columns: repeat(auto-fill,minmax(20rem,1fr));
     grid-gap: 2rem;
 }
