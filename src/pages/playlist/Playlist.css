@@ -1,0 +1,16 @@
+
+.playlists-wrapper{
+    display:flex;
+    flex-direction:column;
+    gap:2rem;
+    padding:1rem 4rem;
+}
+.playlist-header{
+    display:flex;
+    flex-direction: row;
+    align-items:center;
+    gap:0.5rem; 
+}
+.playlist-btn{
+    font-size:1.2rem; 
+}
