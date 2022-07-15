@@ -7,12 +7,14 @@ import { Explore, History, Home, Liked, Login, Playlist, Signup, WatchLater } fr
 import Navbar from "./components/navbar/Navbar";
 import Layout from "./layout/Layout";
 import PrivateRoute from "./components/privateRoutes/PrivateRoute";
+import PlaylistModal from "./components/modal/PlaylistModal";
 
 
 function App() {
   
 return (
     <>
+    <PlaylistModal/>
     <Navbar/>
     
     <Routes>
@@ -29,6 +31,7 @@ return (
       <Route path="/history" element={<PrivateRoute><Layout><History/></Layout></PrivateRoute>} />
       
     </Routes>
+    
     </>
     
 );

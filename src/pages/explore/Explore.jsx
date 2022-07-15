@@ -9,6 +9,7 @@ import { getCategoryList } from '../../features/category/categorySlice';
 import '../../components/chips/CategoryChips.css';
 import './Explore.css';
 
+
 export function Explore() {
 
 
@@ -26,6 +27,7 @@ export function Explore() {
   
   return ( 
     <div className='explore-container'> 
+    
       <div className='category-chips-wrapper'>
         <div className='chips'> All  </div> 
         {categories.map(( category )=><CategoryChips key={category._id} category={category} />)}
