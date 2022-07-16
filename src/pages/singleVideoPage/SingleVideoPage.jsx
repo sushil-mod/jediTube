@@ -68,12 +68,12 @@ function SingleVideoPage() {
                 <div className='single-video-info'>
                     <div className='single-video-uploaded'>{video.uploaded}</div>
                     <div className='single-video-icons'>
-                    {checkInlike?<i className="fas fa-thumbs-up" onClick={()=>dispatch(removeFromLikedVideos({ video,userToken }))} ></i>:
-                    <i className="fal fa-thumbs-up" onClick={()=>dispatch(addToLikedVideos({video,userToken}))} ></i>}
+                    {checkInlike?<i className="fas fa-thumbs-up" onClick={()=>userToken?dispatch(removeFromLikedVideos({ video,userToken })): navigate('/login',{state:{from:location}})} ></i>:
+                    <i className="fal fa-thumbs-up" onClick={()=>userToken?dispatch(addToLikedVideos({video,userToken})):navigate('/login',{state:{from:location}})} ></i>}
                     
                     
-                    {checkInWatchLater?<i className="fas fa-clock" onClick={()=>dispatch(removeFromWatchLaterVideos({video,userToken}))} ></i>:
-                    <i className="fal fa-clock" onClick={()=>dispatch(addToWatchLaterVideos({video,userToken}))} ></i>}
+                    {checkInWatchLater?<i className="fas fa-clock" onClick={()=>userToken?dispatch(removeFromWatchLaterVideos({video,userToken})):navigate('/login',{state:{from:location}})} ></i>:
+                    <i className="fal fa-clock" onClick={()=>userToken?dispatch(addToWatchLaterVideos({video,userToken})):navigate('/login',{state:{from:location}})} ></i>}
                     
 
                     <i className="fas fa-play-circle single-video-playlist-icon" onClick={saveToPlaylistHandler} > <span className='single-video-playlist-text'> Save to playlist</span></i>

@@ -59,13 +59,13 @@ function VideoCard({video}) {
       <div ref={domNode} className='card_ellipsis' onClick={(e)=>{ e.stopPropagation(); setShowOption(!showOption);}} >
         <i className="fas fa-ellipsis-v"></i>
         <div className={`card_ellipsis_option ${!showOption && "display-none" } `} >
-          {!checkInWatchLater ?<div className='option_container' onClick={()=>userToken&&dispatch(addToWatchLaterVideos({ video,userToken }))} >
+          {!checkInWatchLater ?<div className='option_container' onClick={()=>userToken?dispatch(addToWatchLaterVideos({ video,userToken })):navigate('/login',{state:{from:location}})} >
             <div className='option_icon' >
               <MdOutlineWatchLater/> 
             </div>
             Save to Watch Later
           </div>:
-          <div className='option_container option-icon-remove' onClick={()=>userToken&&dispatch(removeFromWatchLaterVideos({ video,userToken }))}>
+          <div className='option_container option-icon-remove' onClick={()=>userToken?dispatch(removeFromWatchLaterVideos({ video,userToken })):navigate('/login',{state:{from:location}})}>
             <div className='option_icon' >
               <MdWatchLater/> 
             </div>
