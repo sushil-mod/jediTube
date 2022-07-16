@@ -17,11 +17,6 @@ function PlaylistModal() {
     const dispatch = useDispatch();
     const domNode = useClickOutside(()=>{dispatch(closeModal());dispatch(closeCreateModal());})
     
-    console.log(userInput);
-    console.log(userToken);
-    console.log("playlists",playlists);
-    console.log("video",selectedVideo);
-
 
     const createPlaylist = (e) => {
       e.preventDefault();

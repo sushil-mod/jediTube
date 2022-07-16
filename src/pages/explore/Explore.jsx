@@ -8,21 +8,25 @@ import { getCategoryList } from '../../features/category/categorySlice';
 
 import '../../components/chips/CategoryChips.css';
 import './Explore.css';
+import { useLocation } from 'react-router-dom';
 
 
 export function Explore() {
 
 
-  const { videos } = useSelector((store)=>store.videoList);
+  const { videos,videoLoader } = useSelector((store)=>store.videoList);
   const { categories } = useSelector((store)=>store.categoryList);
-
+  const { userToken } = useSelector((store)=>store.authentication);
+  
   const dispatch = useDispatch();
   console.log( videos);
   
   useEffect(()=>{
+    
     dispatch(getVideoList());
     dispatch(getCategoryList());
-  },[])
+   
+  },[dispatch])
  
   
   return ( 
