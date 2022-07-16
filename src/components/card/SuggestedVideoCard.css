@@ -1,0 +1,37 @@
+.suggested-video-card{
+    width: 20rem;
+    height: 9rem;
+    display: flex;
+    padding: 0.5rem;
+    gap: 0.5rem;
+}
+.suggested-video-img{
+    width:10rem ;
+    height: 8rem;
+}
+.suggested-video-info{
+    display: flex;
+    width: 9rem;
+    flex-direction: column;
+}
+.suggested-video-card:hover{
+    background-color: #373737;
+}
+.suggested-video-title{
+    width:8.5rem;
+    font-size: 1.2rem;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+.suggested-video-creator{
+    font-size: 1rem;
+    color: gray;
+    padding: 8px 0px 12px 0px ;
+}
+.suggested-video-uploaded{
+    font-size: 0.8rem;
+    color: gray;
+}

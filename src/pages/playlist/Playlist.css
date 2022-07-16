@@ -14,3 +14,8 @@
 .playlist-btn{
     font-size:1.2rem; 
 }
+.playlist-video-wrapper{
+    display: flex;
+    flex-wrap: wrap;
+    gap:1rem;
+}

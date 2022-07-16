@@ -83,3 +83,6 @@
 .option_container:hover{
     background-color: #5c5b5b;
 }
+.option-icon-remove{
+    color: rgb(204, 19, 19);
+}

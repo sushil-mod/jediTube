@@ -15,10 +15,12 @@ export function Playlist() {
         <h1>Your Playlists</h1>
         <h3>({playlists.length})</h3>
       </div>
-
-      {playlists.length>0 ? playlists.map((playlist)=><PlaylistCard playlist={playlist} key={playlist._id} />):
-       <div className='flex-center'><button onClick={()=>navigate('/explore') } className='playlist-btn' > Go To Explore</button>  </div>
-      }
+      <div className='playlist-video-wrapper ' >
+        {playlists.length>0 ? playlists.map((playlist)=><PlaylistCard playlist={playlist} key={playlist._id} />):
+          <div className='flex-center'><button onClick={()=>navigate('/explore') } className='playlist-btn' > Go To Explore</button>  </div>
+        }
+      </div>
+      
 
     </div> 
   )

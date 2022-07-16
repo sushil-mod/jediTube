@@ -36,7 +36,7 @@ export const addVideoToPlaylist = createAsyncThunk('playlist/addVideoToPlaylist'
     try {
         console.log("addchecked",playlist,selectedVideo,userToken)
 
-        const res = await axios.post(`api/user/playlists/${playlist._id}`,{video:{...selectedVideo}},{headers:{authorization:userToken}});
+        const res = await axios.post(`/api/user/playlists/${playlist._id}`,{video:{...selectedVideo}},{headers:{authorization:userToken}});
 
         console.log("addvideo",res.data.playlist);
 
@@ -52,7 +52,7 @@ export const removeVideoFromPlaylist = createAsyncThunk('playlist/removeVideoFro
     try {
         console.log("removechecked",playlist,selectedVideo,userToken)
 
-        const res = await axios.delete(`api/user/playlists/${playlist._id}/${selectedVideo._id}`,{headers:{authorization:userToken}});
+        const res = await axios.delete(`/api/user/playlists/${playlist._id}/${selectedVideo._id}`,{headers:{authorization:userToken}});
 
         console.log("removevideo",res.data.playlist);
 
