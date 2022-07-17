@@ -94,4 +94,67 @@ export const videos = [
     categoryName:"Lego",
     uploaded:"May 28, 2020",
   },
+  {
+    _id: "g6-yclEOgR4",
+    title: "Star Wars Clone Wars Vol 1 ",
+    description:
+      "UMG (on behalf of Walt Disney Records); Walt Disney Music Company (Publishing), BMI - Broadcast Music Inc., CMRRA, UMPI, LatinAutor - UMPG, LatinAutor - Warner Chappell, UNIAO BRASILEIRA DE EDITORAS DE MUSICA - UBEM, Warner Chappell, LatinAutorPerf, and 14 Music Rights Societies",
+    creator: "Brad Head Knock",
+    categoryName:"Animated",
+    uploaded:"Feb 5, 2018",
+  },
+  {
+    _id: "XEPMWpCjIJM",
+    title: "STAR WARS OBI WAN KENOBI Full Movie Cinematic (2022) 4K ULTRA HD Action Fantasy",
+    description:
+      "Gameclips always brings you the best full game movies with a focus on the story cinematic aspect of the video games. On this channel you will find the best cinematic moments and clips from the best video games with added educational narrative storylines to the videos. You will also find full edited let's play walkthroughs and guides to the latest and best new games coming out.",
+    creator: "GameClips",
+    categoryName:"Animated",
+    uploaded:"May 27, 2022",
+  },
+  {
+    _id: "UZtdTmQDCtg",
+    title: "STAR WARS Full Movie Cinematic (2022) 4K ULTRA HD Action Fantasy",
+    description:
+      "Gameclips always brings you the best full game movies with a focus on the story cinematic aspect of the video games. On this channel you will find the best cinematic moments and clips from the best video games with added educational narrative storylines to the videos. You will also find full edited let's play walkthroughs and guides to the latest and best new games coming out.",
+    creator: "GameClips",
+    categoryName:"Animated",
+    uploaded:"May 5, 2022",
+  },
+  {
+    _id: "97uKFYrx-_0",
+    title: "STAR WARS Full Movie Cinematic (2022) 4K ULTRA HD Action Fantasy",
+    description:
+      "Gameclips always brings you the best full game movies with a focus on the story cinematic aspect of the video games. On this channel you will find the best cinematic moments and clips from the best video games with added educational narrative storylines to the videos. You will also find full edited let's play walkthroughs and guides to the latest and best new games coming out.",
+    creator: "GameClips",
+    categoryName:"Animated",
+    uploaded:"Aug 5, 2022",
+  },
+  {
+    _id: "Y1bWJhvneyI",
+    title: "STAR WARS JEDI FALLEN ORDER Gameplay Walkthrough Part 1 FULL GAME Jedi Master - 60FPS No Commentary",
+    description:
+      "Star Wars Jedi Fallen Order Walkthrough Part 1 and until the last part will include the full Star Wars Jedi Fallen Order Gameplay on PC. This Star Wars Jedi Fallen Order Gameplay is recorded in 1080p HD on PC and will include the full game, all endings and all boss fights.",
+    creator: "MKIceAndFire",
+    categoryName:"Games",
+    uploaded:"Nov 17, 2019",
+  },
+  {
+    _id: "wEkFm20QLiA",
+    title: "Star Wars Battlefront 2 - Full Game Walkthrough - 60FPS No Commentary",
+    description:
+      "This longplay of Star Wars Battlefront 2 includes the full campaign and all the boss fights and cutscenes in this full playthrough and is recorded in Full HD and 60 FPS on the PC.",
+    creator: "GameArmy",
+    categoryName:"Games",
+    uploaded:"Feb 28, 2019",
+  },
+  {
+    _id: "xYtr9Bcdtlc",
+    title: "LEGO Star Wars The Skywalker Saga Gameplay Walkthrough FULL GAME 4K 60FPS No Commentary",
+    description:
+      "Gameclips always brings you the best full game movies with a focus on the story cinematic aspect of the video games. On this channel you will find the best cinematic moments and clips from the best video games with added educational narrative storylines to the videos. You will also find full edited let's play walkthroughs and guides to the latest and best new games coming out.",
+    creator: "GameClips",
+    categoryName:"Games",
+    uploaded:"Apr 4, 2022",
+  },
 ];
