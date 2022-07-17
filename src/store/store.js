@@ -6,6 +6,7 @@ import playlistReducer from '../features/playlist/playlistSlice';
 import modalReducer from '../features/modal/modalSlice';
 import likeVideoListReducer from "../features/like/likeSlice";
 import watchLaterVideoListReducer from "../features/watchlater/watchLaterSlice";
+import historyVideoListReducer from "../features/history/historySlice";
 
 export const store = configureStore({
     reducer:{
@@ -16,5 +17,6 @@ export const store = configureStore({
         modal : modalReducer,
         likeVideoList : likeVideoListReducer,
         watchLaterVideoList : watchLaterVideoListReducer,
+        historyVideoList : historyVideoListReducer,
     }
 })
