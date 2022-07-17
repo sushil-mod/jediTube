@@ -10,8 +10,13 @@
     background-color:#4D4D4D;
     color:#F5F5F5;
     border:1px solid #F5F5F5;
+    
 }
 .chips:hover{
+    background-color: #F5F5F5;
+    color: #4D4D4D;
+}
+.chip-active{
     background-color: #F5F5F5;
     color: #4D4D4D;
 }

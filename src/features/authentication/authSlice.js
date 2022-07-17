@@ -2,9 +2,9 @@ import { createAsyncThunk, createSlice } from "@reduxjs/toolkit";
 import axios from "axios";
 
 const initialState = {
-userToken : JSON.parse(localStorage.getItem('loginInfo'))?.userToken ,
-user : "",
-loadingStatus : false ,
+    userToken : JSON.parse(localStorage.getItem('loginInfo'))?.userToken ,
+    user : "",
+    loadingStatus : false ,
 
 }
 

@@ -4,6 +4,7 @@ import { useState } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { useLocation, useNavigate, useParams } from 'react-router-dom';
 import SuggestedVideoCard from '../../components/card/SuggestedVideoCard';
+import { addToHistoryVideos } from '../../features/history/historySlice';
 import { addToLikedVideos, removeFromLikedVideos } from '../../features/like/likeSlice';
 import { openModal } from '../../features/modal/modalSlice';
 import { addSelectedVideo } from '../../features/playlist/playlistSlice';
@@ -30,7 +31,7 @@ function SingleVideoPage() {
     useEffect(()=>{
         getVideo();
     },[])
-
+    
 
     const checkInlike = likeVideos?.some((item)=>item._id === video._id);
     const checkInWatchLater = watchLaterVideos?.some((item)=>item._id === video._id);

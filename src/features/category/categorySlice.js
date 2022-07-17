@@ -2,8 +2,10 @@ import { createAsyncThunk, createSlice } from "@reduxjs/toolkit";
 import axios from "axios";
 
 const initialState={
-    categories:[],
-    categoryLoader:false,
+    categories : [],
+    categoryLoader : false,
+    selectedCategory : "All",
+
 }
 
 
@@ -22,7 +24,11 @@ export const getCategoryList = createAsyncThunk('categoryList/getCategoryList', 
 export const categorySlice = createSlice({
     name:"categoryList",
     initialState,
-    reducers:{},
+    reducers:{
+        updateSelectedCategory:(state,action)=>{
+            state.selectedCategory = action.payload ;
+        },
+    },
     extraReducers:{
         [getCategoryList.pending]:(state)=>{
             state.categoryLoader = true;
@@ -36,5 +42,5 @@ export const categorySlice = createSlice({
         }
     },
 })
-
+export const { updateSelectedCategory } = categorySlice.actions ;
 export default categorySlice.reducer;
