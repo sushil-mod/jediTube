@@ -8,7 +8,8 @@ function Banner() {
           <div className='banner_info'>
 
             <div className='banner_title' >
-                  <p className='banner_title_heading'> heading 1 </p>
+                  <p className='banner_title_heading'> Jedi Tube  </p>
+                  <p> Movies,Animation and Game Video etc... </p>
                     <button className='banner_title_btn'> Explore Now</button>
             </div>
 
