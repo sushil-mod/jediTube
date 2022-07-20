@@ -16,13 +16,12 @@ function SinglePlayListPage() {
     const getPlaylist =async () =>{
         try {
             const res = await axios.get(`/api/user/playlists/${playlistId}`,{headers:{authorization:userToken}})
-            console.log("single res ",res)
+           
             setPlaylist(res.data.playlist);
         } catch (error) {
-            console.log(error);
-        }
+          return rejectWithValue(error.res.data)
         
-    }
+    }}
     useEffect(()=>{
         getPlaylist();
     },[dispatch])

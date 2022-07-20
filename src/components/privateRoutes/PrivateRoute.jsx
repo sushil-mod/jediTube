@@ -5,8 +5,7 @@ import { Navigate, useLocation } from 'react-router-dom';
 function PrivateRoute({children}) {
     const { userToken } =useSelector((store)=> store.authentication);
     const location = useLocation();
-    console.log(location);
-    console.log(userToken);
+
     
   return userToken ? children :<Navigate to={'/login'} state={{ from : location }} replace />
 }

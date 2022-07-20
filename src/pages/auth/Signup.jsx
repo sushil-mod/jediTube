@@ -14,15 +14,15 @@ export function Signup() {
 
 
     const signupInputHandler = (e)=>{
-        console.log(e.target.name);
+       
         setSignInput({...signupInput,[e.target.name]:e.target.value})
       }
 
-      console.log(signupInput);
+     
 
     const signupSubmitHandler = (e,{ email,password,firstName,lastName }) => {
         e.preventDefault();
-        console.log( email,password,firstName,lastName );
+        
         dispatch( userSignupHandler({ email,password,firstName,lastName }) );
     }
 

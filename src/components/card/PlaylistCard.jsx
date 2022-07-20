@@ -9,7 +9,6 @@ function PlaylistCard({playlist}) {
   const { userToken } = useSelector((store)=>store.authentication)
   const dispatch = useDispatch();
   const navigate = useNavigate();
-  console.log ( "playlistId card",playlist )
   return (
     <div className='playlist-card' onClick={()=>navigate(`/playlist/${playlist._id}`)} >
     <img src="./assets/banner2.jpg" alt="playlist image" className='playlist-card-img' />

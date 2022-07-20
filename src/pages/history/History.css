@@ -1,0 +1,28 @@
+.history-title-container{
+    display: flex;
+    justify-content: space-between;
+}
+.history-title{
+    display: flex;
+    gap: 0.5rem;
+    align-items: center;
+}
+.history-lenght{
+    font-size: 1.2rem;
+}
+.history-clearAll-btn{
+    padding: 0.5rem;
+    background-color: rgb(179, 60, 60);
+    color: inherit;
+   
+}
+.active-btn{
+    cursor: pointer;
+}
+.inactive-btn{
+    background-color: rgb(219, 143, 143);
+    cursor: not-allowed;
+}
+.inactive_btn:active {
+    pointer-events: none;
+  }

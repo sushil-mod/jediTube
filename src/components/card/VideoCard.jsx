@@ -2,7 +2,7 @@ import React , { useState ,useEffect  }from 'react';
 import { useDispatch,useSelector } from 'react-redux';
 import { useLocation, useNavigate } from 'react-router-dom';
 import './VideoCard.css';
-import { MdOutlineWatchLater , MdPlaylistPlay ,MdWatchLater ,MdThumbUp} from 'react-icons/md'
+import { MdOutlineWatchLater , MdPlaylistPlay ,MdWatchLater ,MdThumbUp,MdOutlineHistory} from 'react-icons/md'
 import { useRef } from 'react';
 import useClickOutside from '../../hooks/useClickOutside';
 import PlaylistModal from '../modal/PlaylistModal';
@@ -10,6 +10,7 @@ import { openModal } from '../../features/modal/modalSlice';
 import { addSelectedVideo, removeVideoFromPlaylist } from '../../features/playlist/playlistSlice';
 import { addToWatchLaterVideos, removeFromWatchLaterVideos } from '../../features/watchlater/watchLaterSlice';
 import { removeFromLikedVideos } from '../../features/like/likeSlice';
+import { addToHistoryVideos, removeFromHistoryVideos } from '../../features/history/historySlice';
 
 
 function VideoCard({video}) {
@@ -43,7 +44,7 @@ function VideoCard({video}) {
  
 
   return (
-    <div title='card' className='video_card' onClick={()=>{dispatch(addSelectedVideo(video));navigate(`/explore/${video._id}`)}} > 
+    <div title='card' className='video_card' onClick={()=>{dispatch(addSelectedVideo(video));dispatch(addToHistoryVideos({ video,userToken }));navigate(`/explore/${video._id}`)}} > 
     
       <img className='video_img' src={`https://i.ytimg.com/vi/${video._id}/0.jpg`} alt="video-image" />
     <div  title='card info' className='video_info' >
@@ -75,7 +76,14 @@ function VideoCard({video}) {
             <div className='option_icon' >
             <MdThumbUp/>
             </div>
-            remove from like 
+            Remove from like 
+          </div>}
+
+          {pathname === "/history" && <div className='option_container option-icon-remove' onClick={()=>dispatch(removeFromHistoryVideos({ video,userToken }))} >
+            <div className='option_icon' >
+            <MdOutlineHistory/>
+            </div>
+            Remove from History 
           </div>}
 
           <div className='option_container' onClick={selectedVideoHandler} >
