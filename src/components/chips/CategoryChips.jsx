@@ -4,7 +4,7 @@ import { updateSelectedCategory } from '../../features/category/categorySlice';
 import './CategoryChips.css';
 
 function CategoryChips({category}) {
-      console.log(category.icon ) 
+    
 
       const {selectedCategory } = useSelector((store)=>store.categoryList);
       const dispatch = useDispatch();

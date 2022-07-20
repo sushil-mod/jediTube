@@ -10,10 +10,10 @@ const initialState ={
 export const getVideoList = createAsyncThunk('videoList/getVideoList',async (_,{rejectWithValue})=>{
     try {
         const res = await axios.get("/api/videos");
-        console.log(res.data.videos);
+        
         return res.data.videos;
     } catch (error) {
-        console.log(error);
+       
         return rejectWithValue(error.res.data);
     }
 } )

@@ -10,14 +10,14 @@ const initialState ={
 
 export const addPlaylist = createAsyncThunk('playlist/addPlaylist',async ({userInput,userToken},{rejectWithValue})=>{
     try {
-        console.log("slice",userInput,userToken);
+       
         
         const res = await axios.post("/api/user/playlists",{playlist:{title:userInput,description:""}},{headers:{authorization:userToken}});
         
-        console.log("playlist",res.data.playlists);
+        
         return res.data.playlists;
     } catch (error) {
-        console.log("playlist",error);
+       
         return rejectWithValue(error.res.data)
     }
 })
@@ -25,41 +25,41 @@ export const addPlaylist = createAsyncThunk('playlist/addPlaylist',async ({userI
 export const removePlaylist = createAsyncThunk('playlist/removePlaylist',async({playlist,userToken},{})=>{
     try {
         const res = await axios.delete(`/api/user/playlists/${playlist._id}`,{headers:{authorization:userToken}})
-        console.log("remove",res.data.playlists);
+       
         return res.data.playlists;
     } catch (error) {
-        console.log("remove error",error)
+        return rejectWithValue(error.res.data)
     }
 })
 
 export const addVideoToPlaylist = createAsyncThunk('playlist/addVideoToPlaylist',async({playlist,selectedVideo,userToken},{rejectWithValue})=>{
     try {
-        console.log("addchecked",playlist,selectedVideo,userToken)
+       
 
         const res = await axios.post(`/api/user/playlists/${playlist._id}`,{video:{...selectedVideo}},{headers:{authorization:userToken}});
 
-        console.log("addvideo",res.data.playlist);
+      
 
         return res.data.playlist;
 
     } catch (error) {
-        console.log("pla",error);
+        
         return rejectWithValue(error.res.data)
     }
 })
 
 export const removeVideoFromPlaylist = createAsyncThunk('playlist/removeVideoFromPlaylist',async({playlist,selectedVideo,userToken},{})=>{
     try {
-        console.log("removechecked",playlist,selectedVideo,userToken)
+        
 
         const res = await axios.delete(`/api/user/playlists/${playlist._id}/${selectedVideo._id}`,{headers:{authorization:userToken}});
 
-        console.log("removevideo",res.data.playlist);
+       ;
 
         return res.data.playlist;
 
     } catch (error) {
-        console.log("pla",error);
+       
         return rejectWithValue(error.res.data)
     }
 })

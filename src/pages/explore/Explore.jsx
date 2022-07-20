@@ -19,7 +19,7 @@ export function Explore() {
   const { userToken } = useSelector((store)=>store.authentication);
   
   const dispatch = useDispatch();
-  console.log( videos);
+
   
   useEffect(()=>{
     
@@ -27,7 +27,7 @@ export function Explore() {
     dispatch(getCategoryList());
    
   },[dispatch])
-  console.log(" selected category " ,selectedCategory);
+
 
   const categoryVideoFilter =( videos,selectedCategory )=>{
 
@@ -37,7 +37,7 @@ export function Explore() {
 
   const filteredVideos = categoryVideoFilter( videos,selectedCategory )
 
-  console.log( "filteredVideos",filteredVideos );
+ 
   
   return ( 
     <div className='explore-container'> 

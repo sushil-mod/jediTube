@@ -15,18 +15,16 @@ export function Login() {
   const { userToken } = useSelector((store)=> store.authentication )
 
   const loginInputHandler = (e)=>{
-    console.log(e.target.name);
+   
     setLoginInput({...loginInput,[e.target.name]:e.target.value})
   }
 
   const guestUserInput = {email:"adarshbalika@gmail.com",password:"adarshBalika123"}
 
-  console.log(loginInput);
-  console.log(location);
-
+ 
   const loginSubmitHandler = (e,{email,password}) => {
     e.preventDefault();
-    // console.log( {email:email,password:password} +"hello");
+    
     dispatch( userLoginHandler( {email,password} ) );
 
    

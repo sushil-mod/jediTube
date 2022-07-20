@@ -12,10 +12,10 @@ const initialState={
 export const getCategoryList = createAsyncThunk('categoryList/getCategoryList', async (_,{rejectWithValue})=>{
     try {
         const res = await axios.get("/api/categories");
-        console.log(res.data.categories);
+       
         return res.data.categories;
     } catch (error) {
-        console.log("from error");
+       
         return rejectWithValue(error.res.data);
     }
 })

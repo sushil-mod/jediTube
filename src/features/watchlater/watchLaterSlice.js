@@ -8,24 +8,24 @@ const initialState = {
 
 export const addToWatchLaterVideos = createAsyncThunk("watchLaterVideoList/addToWatchLaterVideos",async({video,userToken},{rejectWithValue})=>{
     try {
-        console.log("add watch later",video,userToken);
+      
         const res = await axios.post('/api/user/watchlater',{video:{...video}},{headers:{authorization:userToken}})
-        console.log("watchlater",res.data.watchlater);
+       
         return res.data.watchlater;
     } catch (error) {
-        console.log(error)
+      
         return rejectWithValue(error.res.data);
     }
 })
 
 export const removeFromWatchLaterVideos = createAsyncThunk("watchLaterVideoList/removeFromWatchLater",async({video,userToken},{rejectWithValue})=>{
     try {
-        console.log("remove watchlater",video,userToken)
+        
         const res = await axios.delete(`/api/user/watchlater/${video._id}`,{headers:{authorization:userToken}})
-        console.log("hello",res.data.watchlater);
+        
         return res.data.watchlater;
     } catch (error) {
-        console.log(error)
+        
         return rejectWithValue(error.res.data);
     }
 })

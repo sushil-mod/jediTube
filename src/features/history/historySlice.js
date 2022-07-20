@@ -8,37 +8,37 @@ const initialState = {
 
 export const addToHistoryVideos = createAsyncThunk("historyVideoList/addToHistoryVideos",async({video,userToken},{rejectWithValue})=>{
     try {
-        console.log("history add",video,userToken);
+       
         const res = await axios.post("/api/user/history",{video:{...video}},{headers:{authorization:userToken}})
-        console.log(res.data.history);
+       
         return res.data.history;
     } catch (error) {
-        console.log(error);
+       
         rejectWithValue(error.res.data);
     }
 })
 
 export const removeFromHistoryVideos = createAsyncThunk("historyVideoList/removeFromHistoryVideos",async({video,userToken},{})=>{
     try {
-        console.log("history remove",video,userToken);
+ 
         const res = await axios.delete(`/api/user/history/${video._id}`,{headers:{authorization:userToken}})
-        console.log("remove req",res.data.history);
+     
         return res.data.history;
     } catch (error) {
-        console.log(error);
+        
         rejectWithValue(error.res.data);
     }
 })
 
 export const removeAllFromHistoryVideos = createAsyncThunk("historyVideoList/removeAllFromHistoryVideos",async(userToken,{rejectWithValue})=>{
     try {
-        console.log("remove all",userToken);
+        
         const res = await axios.delete("/api/user/history/all",{headers:{authorization:userToken}})
-        console.log("remove all res",res);
+        
         return res.data.history; 
         
     } catch (error) {
-        console.log(error);
+       
         rejectWithValue(error.res.data);
     }
 })
