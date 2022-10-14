@@ -1,5 +1,6 @@
 import { createSlice ,createAsyncThunk} from "@reduxjs/toolkit";
 import axios from "axios";
+import { toast } from "react-toastify";
 
 const initialState = {
     likeVideosLoader : false,
@@ -8,10 +9,8 @@ const initialState = {
 
 
 export const addToLikedVideos = createAsyncThunk("likeVideoList/addToLikedVideos",async({video,userToken},{rejectWithValue})=>{
-    try {
-       
+    try { 
         const res = await axios.post('/api/user/likes',{video:{...video}},{headers:{authorization:userToken}})
-       
         return res.data.likes;
     } catch (error) {
         return rejectWithValue(error.res.data);
@@ -19,13 +18,10 @@ export const addToLikedVideos = createAsyncThunk("likeVideoList/addToLikedVideos
 })
 
 export const removeFromLikedVideos = createAsyncThunk("likeVideoList/removeFromLikedVideos",async({video,userToken},{rejectWithValue})=>{
-    try {
-       
+    try { 
         const res = await axios.delete(`/api/user/likes/${video._id}`,{headers:{authorization:userToken}})
-      
         return res.data.likes;
     } catch (error) {
-       
         return rejectWithValue(error.res.data);
     }
 })
@@ -42,6 +38,7 @@ const likeSlice = createSlice({
         [addToLikedVideos.fulfilled]:(state ,action)=>{
             state.likeVideosLoader = false;
             state.likeVideos = action.payload;
+            toast.success("video added to liked Videos")
         },
         [addToLikedVideos.rejected]:(state,action)=>{
             state.likeVideosLoader = false;
@@ -52,6 +49,7 @@ const likeSlice = createSlice({
         [removeFromLikedVideos.fulfilled]:(state,action)=>{
             state.likeVideosLoader = false;
             state.likeVideos = action.payload;
+            toast.success("video removed from liked Videos")
         },
         [removeFromLikedVideos.rejected]:(state,action)=>{
             state.likeVideosLoader = false;

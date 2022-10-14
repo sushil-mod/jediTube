@@ -1,15 +1,20 @@
 import React from 'react';
+import { useNavigate } from 'react-router-dom';
 import './SuggestedVideoCard.css';
 
-function SuggestedVideoCard() {
+function SuggestedVideoCard({suggestedVideo}) {
+
+  const navigate = useNavigate();
+
+  const { _id ,title,creator,uploded  } = suggestedVideo
   return (
-    <div className='suggested-video-card'>
-    <img className='suggested-video-img' src={`https://i.ytimg.com/vi/u71pHOyvBp0/0.jpg`}alt="video-image" />
+    <div className='suggested-video-card' onClick={()=>navigate(`/explore/${_id}`)} >
+    <img className='suggested-video-img' src={`https://i.ytimg.com/vi/${_id}/0.jpg`} alt="video-image" />
     <div className='suggested-video-info'>
        
-        <p className='suggested-video-title'>title sdsd asdsd sd sd sds sds dsd sd sd sd sdas sd dsdsa sdsd </p>
-        <p className='suggested-video-creator' >creator name</p>
-        <p className='suggested-video-uploaded'>uploded</p>
+        <p className='suggested-video-title'>{title}</p>
+        <p className='suggested-video-creator' >{creator}</p>
+        <p className='suggested-video-uploaded'>{uploded}</p>
         
     </div>
 </div>

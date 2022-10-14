@@ -1,5 +1,6 @@
 import { createSlice , createAsyncThunk } from "@reduxjs/toolkit";
 import axios from "axios";
+import { toast } from "react-toastify";
 
 const initialState = {
     historyVideosLoader : false,
@@ -64,6 +65,7 @@ const historySlice = createSlice({
         [removeFromHistoryVideos.fulfilled]:(state,action)=>{
             state.historyVideosLoader = true ;
             state.historyVideos = action.payload ;
+            toast.success("video removed from history successfully");
         },
         [removeFromHistoryVideos.rejected]:(state,action)=>{
             state.historyVideosLoader = true ;

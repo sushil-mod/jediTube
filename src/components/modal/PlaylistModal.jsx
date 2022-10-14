@@ -9,7 +9,8 @@ import { addPlaylist, addVideoToPlaylist, removeVideoFromPlaylist } from '../../
 function PlaylistModal() {
     
     const [userInput,setUserInput] = useState("");
-    
+    const [showError, setShowError] = useState(false);
+
     const { showModal,showCreateModal } = useSelector((store)=>store.modal)
     const { userToken } = useSelector((store)=>store.authentication)
     const { playlists,selectedVideo } = useSelector((store)=>store.playlist)
@@ -20,6 +21,11 @@ function PlaylistModal() {
 
     const createPlaylist = (e) => {
       e.preventDefault();
+      if( userInput.trim().length <= 0 ){
+        setShowError(true);
+        return ;
+      }
+      setShowError(false);
       dispatch(addPlaylist({userInput,userToken}));
       setUserInput("");
       dispatch(closeCreateModal());
@@ -28,7 +34,6 @@ function PlaylistModal() {
 
   return (
     <div  className={`modal-wrapper ${showModal?'display-block':'display-none'} `} >
-      
            
         <div ref={domNode} className="modal-container" >
           <div className='modal-title'>
@@ -49,6 +54,7 @@ function PlaylistModal() {
             </div>)}
           </div>
 
+          <div className={`modal-error ${!showError?"display-none":""}`}> Enter a valid Playlist name </div>
 
           {!showCreateModal?<div className='modal-create' onClick={()=>dispatch(openCreateModal())} >
             <div className='modal-create-icon'><i className="far fa-plus"></i> </div>
@@ -63,12 +69,7 @@ function PlaylistModal() {
             <button className='modal-playlist-btn' type='submit'>Create </button>
           </form>
           }
-
-
-
-        </div> 
-            
-            
+        </div>      
     </div>
   )
 }

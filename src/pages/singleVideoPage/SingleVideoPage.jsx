@@ -30,7 +30,8 @@ function SingleVideoPage() {
     }
     useEffect(()=>{
         getVideo();
-    },[])
+        
+    },[videoId])
     
 
     const checkInlike = likeVideos?.some((item)=>item._id === video._id);
@@ -49,6 +50,9 @@ function SingleVideoPage() {
         
       }
 
+      console.log("videos",videos.filter((item)=>item.categoryName === video.categoryName));
+      console.log("video",video);
+      console.log("videoId",videoId);
   return (
     <div  className="single-video-wrapper ">
         <div className=' single-video-container' > 
@@ -86,7 +90,7 @@ function SingleVideoPage() {
         </div>
         
         <div className='video-suggestion-container '> 
-            <SuggestedVideoCard/>
+            {videos.filter((item)=>item.categoryName === video.categoryName).map((item)=><SuggestedVideoCard suggestedVideo={item} key={item._id} />)}
         </div>
     </div>
   )

@@ -54,7 +54,7 @@ function VideoCard({video}) {
       <div className='video_title_container'>
         <h3 className='video_title'> { video.title }</h3>
         <h4  className='video_channel' >{video.creator} <i className="fas fa-check-circle video_channel" title='verified' ></i> </h4>
-        <h4>hello</h4>
+        <p>{video.categoryName}</p>
       </div>
 
       <div ref={domNode} className='card_ellipsis' onClick={(e)=>{ e.stopPropagation(); setShowOption(!showOption);}} >

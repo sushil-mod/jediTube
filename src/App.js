@@ -13,12 +13,26 @@ import { useDispatch } from "react-redux";
 import { getVideoList } from "./features/video/videoSlice";
 import { getCategoryList } from "./features/category/categorySlice";
 import SinglePlayListPage from "./pages/singlePlaylistPage/SinglePlayListPage";
+import { ToastContainer } from "react-toastify";
+import 'react-toastify/dist/ReactToastify.css';
 
 
 function App() {
 
 return (
     <>
+    <ToastContainer 
+      position="top-center"
+      autoClose={1500}
+      hideProgressBar={false}
+      newestOnTop={false}
+      closeOnClick
+      rtl={false}
+      pauseOnFocusLoss
+      draggable
+      pauseOnHover
+      />
+
     <PlaylistModal/>
     <Navbar/>
     
