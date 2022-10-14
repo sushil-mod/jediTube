@@ -94,6 +94,11 @@
     font-size:1.2rem;
     margin:auto; 
 }
+.modal-error{
+    color:red;
+    font-size:1rem;
+    text-align:center;  
+}
 
 .modal-title-icon:hover{
     background-color:#878484 ;

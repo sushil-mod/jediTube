@@ -24,10 +24,7 @@ export function Login() {
  
   const loginSubmitHandler = (e,{email,password}) => {
     e.preventDefault();
-    
     dispatch( userLoginHandler( {email,password} ) );
-
-   
   }
 
 
@@ -45,9 +42,9 @@ export function Login() {
         <form className="form-auth flex-center flex-col bx-shadow text-color" onSubmit={(e)=>loginSubmitHandler(e,loginInput)}>
             <div className="form-logo wd-100">
                 <Link to="/"> 
-                    <div className="nav-logo flex-center flex-col ">
-                        <i className="fas fa-jedi nav-logo-icon"></i>
-                        <span className="nav-logo-txt">Jedi Tube</span>
+                    <div className="nav-logo flex-center flex-col " >
+                        <i className="fas fa-jedi nav-logo-icon" style={{ color : '#FF0000',border:"4px solid #FF0000" }}></i>
+                        <span className="nav-logo-txt text-color">Jedi Tube</span>
                     </div>
                 </Link>
             </div>
@@ -57,14 +54,15 @@ export function Login() {
             <div className="form-input padd-md wd-100" >
                 <div className="input-container wd-100" >
                     <label className="padd-top-md" htmlFor="">Username</label>
-                    <input type="email" name='email'  placeholder="Enter emailId" onChange={(e)=> loginInputHandler(e) } />
+                    <input type="email" name='email'  placeholder="Enter emailId" onChange={(e)=> loginInputHandler(e) } required/>
 
                     <label className="padd-top-md" htmlFor="">Password</label>
-                    <input type="password" name='password'  placeholder="Enter Password" onChange={(e)=> loginInputHandler(e) } />
+                    <input type="password" name='password'  placeholder="Enter Password" onChange={(e)=> loginInputHandler(e) } required/>
                 </div>
+              
                 <div className="flex-space-btw padd-top-md wd-100">
-                    <span><input type="checkbox" /><span className="padd-left-sm">Remember me</span> </span>
-                    <Link className='text-color' to=""> Forgot Password ?</Link>
+                    <span><input type="checkbox" required /><span className="padd-left-sm">Remember me</span> </span>
+                    
                 </div>
             </div>
 
