@@ -1,5 +1,6 @@
 import { createAsyncThunk, createSlice } from "@reduxjs/toolkit";
 import axios from "axios";
+import { toast } from "react-toastify";
 
 const initialState = {
     userToken : JSON.parse(localStorage.getItem('loginInfo'))?.userToken ,
@@ -53,7 +54,7 @@ export const authSlice = createSlice({
             state.userToken = action.payload.encodedToken ;
             state.user = action.payload.foundUser ;
             localStorage.setItem('loginInfo',JSON.stringify({ userToken : action.payload.encodedToken ,user: action.payload.foundUser }))
-            
+            toast.success("Login Successfull")
         },
         [userLoginHandler.rejected]:(state,action)=>{
             state.loadingStatus = false;
